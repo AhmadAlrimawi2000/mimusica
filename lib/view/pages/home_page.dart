@@ -1,4 +1,6 @@
+import 'package:app_flutter_mimusica/services/theme_service.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -54,8 +56,6 @@ class HomePage extends StatelessWidget {
                     fontSize: 24,
                   ),
                 ),
-                const SizedBox(width: 20),
-                ElevatedButton(onPressed: () {}, child: Text("Click"))
               ],
             )
           ],

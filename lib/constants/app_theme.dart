@@ -2,7 +2,26 @@ import 'package:app_flutter_mimusica/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static ThemeData darkTheme = ThemeData(
+  ThemeData lightTheme = ThemeData.light().copyWith(
+    brightness: Brightness.light,
+    primaryColor: AppColors.lightPrimary,
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppColors.lightAccent,
+      brightness: Brightness.light,
+      secondary: AppColors.lightAccent,
+    ),
+    sliderTheme: SliderThemeData(
+      activeTrackColor: AppColors.lightAccent,
+      inactiveTrackColor: AppColors.lightSecondary,
+      thumbColor: AppColors.lightAccent,
+    ),
+    buttonTheme: ButtonThemeData(
+      buttonColor: AppColors.lightAccent,
+      textTheme: ButtonTextTheme.primary,
+    ),
+  );
+
+  ThemeData darkTheme = ThemeData.dark().copyWith(
     brightness: Brightness.dark,
     primaryColor: AppColors.darkPrimary,
     colorScheme: ColorScheme.fromSeed(
@@ -20,20 +39,9 @@ class AppTheme {
       inactiveTrackColor: AppColors.darkSecondary,
       thumbColor: AppColors.darkAccent,
     ),
-  );
-
-  static ThemeData lightTheme = ThemeData(
-    brightness: Brightness.light,
-    primaryColor: AppColors.lightPrimary,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.lightAccent,
-      brightness: Brightness.light,
-      secondary: AppColors.lightAccent,
-    ),
-    sliderTheme: SliderThemeData(
-      activeTrackColor: AppColors.lightAccent,
-      inactiveTrackColor: AppColors.lightSecondary,
-      thumbColor: AppColors.lightAccent,
+    buttonTheme: ButtonThemeData(
+      buttonColor: AppColors.darkAccent,
+      textTheme: ButtonTextTheme.primary,
     ),
   );
 }
